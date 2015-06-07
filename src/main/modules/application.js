@@ -12,6 +12,14 @@ express()
       response.render(request.params.template);
     })
 
+    .get('/resources/models/example.json', function (request, response) {
+      response.json({
+        application: {
+          title: "MEAN Stack Sample"
+        }
+      });
+    })
+
     .get('/(*)', function (request, response) {
       response.render("index", {
         application: {
