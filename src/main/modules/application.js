@@ -2,6 +2,8 @@ var express = require('express');
 
 express()
 
+    .use('/resources/static', express.static('src/main/resources/static'))
+
     .set('view engine', 'jade')
 
     .set('views', 'src/main/resources/templates')
