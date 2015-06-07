@@ -1,0 +1,15 @@
+{
+  "name": "mean-stack-sample",
+  "description": "Sample web application based on MEAN stack",
+  "version": "1.0.0-SNAPSHOT",
+  "dependencies": {
+    "express": "~4.12.4",
+    "jade": "~1.10.0"
+  },
+  "engines": {
+    "node": "~0.12.4"
+  },
+  "scripts": {
+    "start": "node src/main/modules/application.js"
+  }
+}
