@@ -8,6 +8,10 @@ express()
 
     .set('views', 'src/main/resources/templates')
 
+    .get('/resources/templates/:template(*).(htm|html)', function (request, response) {
+      response.render(request.params.template);
+    })
+
     .get('/(*)', function (request, response) {
       response.render("index", {
         application: {
