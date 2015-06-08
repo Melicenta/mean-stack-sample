@@ -4,7 +4,9 @@
   "version": "1.0.0-SNAPSHOT",
   "dependencies": {
     "express": "~4.12.4",
-    "jade": "~1.10.0",
+    "jade": "~1.10.0"
+  },
+  "devDependencies": {
     "gulp": "~3.6.2",
     "gulp-browserify": "~0.5.0",
     "gulp-concat": "~2.2.0",
@@ -15,9 +17,6 @@
     "angular-ui-router": "~0.2.15",
     "browserify": "~3.46.0",
     "rimraf": "*"
-  },
-  "devDependencies": {
-
   },
   "engines": {
     "node": "~0.12.4"
