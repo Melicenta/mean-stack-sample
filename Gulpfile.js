@@ -7,13 +7,13 @@ gulp.task('dev', ['browserify'], function () {
 });
 
 gulp.task('browserify', function() {
-  gulp.src(['scr/main/resources/static/scripts/script-1.js'])
+  gulp.src(['src/main/resources/static/scripts/script-1.js'])
       .pipe(browserify({
         insertGlobals: true,
         debug: false
       }))
       .pipe(concat('bundle.js'))
-      .pipe(gulp.dest('scr/main/resources/static/scripts'));
+      .pipe(gulp.dest('src/main/resources/static/scripts'));
 });
 
 gulp.task('default', ['dev']);
