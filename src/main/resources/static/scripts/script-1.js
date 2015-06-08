@@ -24,7 +24,7 @@ application.config(['$stateProvider', '$urlRouterProvider', function ($stateProv
         .state('application.schema', {
             url: 'schema',
             views: {
-                'content@': {
+                'main-content@': {
                     templateUrl: 'resources/templates/schema.html'
                 }
             }
