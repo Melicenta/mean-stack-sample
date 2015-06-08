@@ -28,7 +28,7 @@
     "node": "~0.12.4"
   },
   "scripts": {
-    "preinstall": "gulp dev",
+    "postinstall": "gulp dev",
     "start": "node src/main/modules/application.js"
   }
 }
