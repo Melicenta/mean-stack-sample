@@ -13,10 +13,10 @@ application.config(['$stateProvider', '$urlRouterProvider', function ($stateProv
             url: '/',
             views: {
                 header: {
-                    templateUrl: 'resources/templates/header'
+                    templateUrl: 'resources/templates/header.html'
                 },
                 footer: {
-                    templateUrl: 'resources/templates/footer'
+                    templateUrl: 'resources/templates/footer.html'
                 }
             }
         })
@@ -25,7 +25,7 @@ application.config(['$stateProvider', '$urlRouterProvider', function ($stateProv
             url: 'schema',
             views: {
                 'content@': {
-                    templateUrl: 'resources/templates/schema'
+                    templateUrl: 'resources/templates/schema.html'
                 }
             }
         });
