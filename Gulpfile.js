@@ -1,6 +1,9 @@
 var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
+    sourcemaps = require('gulp-sourcemaps'),
+    uglify = require('gulp-uglify'),
+    ngAnnotate = require('gulp-ng-annotate'),
     less = require('gulp-less'),
     rimraf = require('rimraf'),
     LessPluginAutoprefix = require('less-plugin-autoprefix'),
@@ -40,7 +43,11 @@ gulp.task('scripts', function() {
         insertGlobals: true,
         debug: false
       }))
+      .pipe(sourcemaps.init())
       .pipe(concat('bundle.js'))
+      .pipe(ngAnnotate())
+      .pipe(uglify())
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest('build/resources/static/scripts'));
 });
 
