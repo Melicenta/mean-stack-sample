@@ -6,7 +6,7 @@ application.config(["$locationProvider", function ($locationProvider) {
 
 application.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/schema');
 
     $stateProvider
         .state('application', {

@@ -20,6 +20,10 @@ express()
       });
     })
 
+    .get('/', function (request, response) {
+      response.redirect('/schema');
+    })
+
     .get('/(*)', function (request, response) {
       response.render("index", {
         application: {
