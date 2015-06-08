@@ -4,9 +4,7 @@
   "version": "1.0.0-SNAPSHOT",
   "dependencies": {
     "express": "~4.12.4",
-    "jade": "~1.10.0"
-  },
-  "devDependencies": {
+    "jade": "~1.10.0",
     "connect-livereload": "~0.4.0",
     "gulp-concat": "~2.2.0",
     "gulp-embedlr": "~0.5.2",
@@ -23,6 +21,9 @@
     "angular": "~1.2.16",
     "gulp-clean": "~0.3.1",
     "gulp-rimraf": "~0.1.0"
+  },
+  "devDependencies": {
+
   },
   "engines": {
     "node": "~0.12.4"
