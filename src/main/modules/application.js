@@ -35,4 +35,4 @@ express()
       });
     })
 
-    .listen(process.env.PORT);
+    .listen(process.env.PORT || 5000);
