@@ -13,7 +13,8 @@
     "less-plugin-clean-css": "~1.5.0",
     "angular": "~1.4.0",
     "angular-ui-router": "~0.2.15",
-    "browserify": "~3.46.0"
+    "browserify": "~3.46.0",
+    "rimraf": "*"
   },
   "devDependencies": {
 
@@ -23,6 +24,6 @@
   },
   "scripts": {
     "postinstall": "gulp dev",
-    "start": "node src/main/modules/application.js"
+    "start": "node build/modules/application.js"
   }
 }

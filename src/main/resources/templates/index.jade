@@ -1,13 +1,12 @@
 doctype html
 
-html(data-ng-app = "application", lang = "en")
+html(lang = "en", data-ng-app = "root")
 
   head
 
     base(href = system.path)
 
-    link(rel = "stylesheet", href = "resources/static/styles/style-1.css")
-    link(rel = "stylesheet", href = "resources/static/styles/style-2.css")
+    link(rel = "stylesheet", href = "resources/static/styles/bundle.css")
 
     title
       = application.title
@@ -24,4 +23,5 @@ html(data-ng-app = "application", lang = "en")
 
     div(data-ui-view = "footer")
 
-    script(type = "text/javascript", src = "resources/static/scripts/bundle.js")
+    script(type = "text/javascript", src = "resources/static/scripts/external/bundle.js")
+    script(type = "text/javascript", src = "resources/static/scripts/application/bundle.js")
