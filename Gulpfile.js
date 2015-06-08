@@ -26,7 +26,7 @@ gulp.task('less', function () {
   clean = new LessPluginClean({
     advanced: true
   });
-  gulp.src(['src/main/resources/static/styles/**/*.js'])
+  gulp.src(['src/main/resources/static/styles/bundle.less'])
       .pipe(less({
         plugins: [autoprefix, clean]
       }))
