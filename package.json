@@ -10,7 +10,7 @@
     "gulp": "~3.6.2",
     "browserify": "~3.46.0",
     "angular": "~1.4.0",
-    "angular-ui-router": "~0.2.15",
+    "angular-ui-router": "~0.2.15"
   },
   "devDependencies": {
 
