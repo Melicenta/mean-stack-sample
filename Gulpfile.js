@@ -10,20 +10,13 @@ gulp.task('dev', ['browserify', 'less'], function () {
 });
 
 gulp.task('browserify', function() {
-  gulp.src(['src/main/resources/static/scripts/external/bundle.js'])
+  gulp.src(['src/main/resources/static/scripts/application.js'])
       .pipe(browserify({
         insertGlobals: true,
         debug: false
       }))
       .pipe(concat('bundle.js'))
-      .pipe(gulp.dest('src/main/resources/static/scripts/external'));
-  gulp.src(['src/main/resources/static/scripts/application/root.js'])
-      .pipe(browserify({
-        insertGlobals: true,
-        debug: false
-      }))
-      .pipe(concat('bundle.js'))
-      .pipe(gulp.dest('src/main/resources/static/scripts/application'));
+      .pipe(gulp.dest('src/main/resources/static/scripts'));
 });
 
 gulp.task('less', function () {
