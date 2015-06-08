@@ -5,12 +5,15 @@
   "dependencies": {
     "express": "~4.12.4",
     "jade": "~1.10.0",
-    "gulp-concat": "~2.2.0",
-    "gulp-browserify": "~0.5.0",
     "gulp": "~3.6.2",
-    "browserify": "~3.46.0",
+    "gulp-browserify": "~0.5.0",
+    "gulp-concat": "~2.2.0",
+    "gulp-less": "~3.0.3",
+    "less-plugin-autoprefix": "~1.4.2",
+    "less-plugin-clean-css": "~1.5.0",
     "angular": "~1.4.0",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "browserify": "~3.46.0"
   },
   "devDependencies": {
 
