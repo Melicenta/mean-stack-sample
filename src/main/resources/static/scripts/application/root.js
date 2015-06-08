@@ -1,7 +1,4 @@
-var angular = require("angular"),
-	angularRouter = require("angular-ui-router");
-
-var application = angular.module("application", ['ui.router']);
+var application = angular.module("root", ['ui.router']);
 
 application.config(["$locationProvider", function ($locationProvider) {
     $locationProvider.html5Mode(true);
