@@ -7,7 +7,7 @@ gulp.task('dev', ['browserify'], function () {
 });
 
 gulp.task('browserify', function() {
-  gulp.src(['scr/main/resources/static/scripts/main.js'])
+  gulp.src(['scr/main/resources/static/scripts/script-1.js'])
       .pipe(browserify({
         insertGlobals: true,
         debug: false

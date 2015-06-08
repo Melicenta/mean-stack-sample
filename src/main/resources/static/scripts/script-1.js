@@ -1,3 +1,6 @@
+var angular = require("angular"),
+	angularRouter = require("angular-ui-router");
+
 var application = angular.module("application", ['ui.router']);
 
 application.config(["$locationProvider", function ($locationProvider) {
