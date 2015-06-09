@@ -7,7 +7,7 @@ application.config(["$locationProvider", function ($locationProvider) {
     $locationProvider.html5Mode(true);
 }]);
 
-application.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+application.config(function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/schema');
 
@@ -32,4 +32,4 @@ application.config(['$stateProvider', '$urlRouterProvider', function ($stateProv
                 }
             }
         });
-}]);
+});
