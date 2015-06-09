@@ -2,11 +2,11 @@ var express = require('express');
 
 express()
 
-    .use('/resources/static', express.static('src/main/resources/static'))
+    .use('/resources/static', express.static('./build/resources/static'))
 
     .set('view engine', 'jade')
 
-    .set('views', 'src/main/resources/templates')
+    .set('views', './build/resources/templates')
 
     .get('/resources/templates/:template(*).(htm|html)', function (request, response) {
       response.render(request.params.template);
