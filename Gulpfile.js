@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     LessPluginAutoprefix = require('less-plugin-autoprefix'),
     LessPluginClean = require('less-plugin-clean-css');
 
-gulp.task('dev', ['clean', 'modules', 'templates', 'images', 'scripts', 'styles'], function () {
+gulp.task('dev', ['modules', 'templates', 'images', 'scripts', 'styles'], function () {
 
 });
 
@@ -20,25 +20,28 @@ gulp.task('clean', function () {
 
 gulp.task('modules', function () {
 
-  gulp.src(['src/main/modules'])
-    .pipe(gulp.dest(['build/modules']));
+  gulp.src(['./src/main/modules/**/*'], {
+    base: './src/main/modules'
+  }).pipe(gulp.dest('./build/modules'));
 });
 
 gulp.task('templates', function () {
 
-  gulp.src(['src/main/resources/templates'])
-    .pipe(gulp.dest(['build/resources/templates']));
+  gulp.src(['./src/main/resources/templates/**/*'], {
+    base: './src/main/resources/templates'
+  }).pipe(gulp.dest('./build/resources/templates'));
 });
 
 gulp.task('images', function () {
 
-  gulp.src(['src/main/resources/static/images'])
-    .pipe(gulp.dest(['build/resources/static/images']));
+  gulp.src(['./src/main/resources/static/images/**/*'], {
+    base: './src/main/resources/static/images'
+  }).pipe(gulp.dest('./build/resources/static/images'));
 });
 
 gulp.task('scripts', function() {
 
-  gulp.src(['src/main/resources/static/scripts/application.js'])
+  gulp.src(['./src/main/resources/static/scripts/application.js'])
       .pipe(browserify({
         insertGlobals: true,
         debug: false
@@ -48,7 +51,7 @@ gulp.task('scripts', function() {
       .pipe(ngAnnotate())
       .pipe(uglify())
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest('build/resources/static/scripts'));
+      .pipe(gulp.dest('./build/resources/static/scripts'));
 });
 
 gulp.task('styles', function () {
@@ -59,11 +62,11 @@ gulp.task('styles', function () {
   clean = new LessPluginClean({
     advanced: true
   });
-  gulp.src(['src/main/resources/static/styles/bundle.less'])
+  gulp.src(['./src/main/resources/static/styles/bundle.less'])
       .pipe(less({
         plugins: [autoprefix, clean]
       }))
-      .pipe(gulp.dest('build/resources/static/styles'));
+      .pipe(gulp.dest('./build/resources/static/styles'));
 });
 
 gulp.task('default', ['dev']);
