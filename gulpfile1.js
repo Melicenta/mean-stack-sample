@@ -9,37 +9,39 @@ var gulp = require('gulp'),
     LessPluginAutoprefix = require('less-plugin-autoprefix'),
     LessPluginClean = require('less-plugin-clean-css');
 
-gulp.task('dev', ['clean', 'modules', 'templates', 'images', 'scripts', 'styles'], function () {
+gulp.task('dev', ['modules', 'templates', 'images', 'scripts', 'styles'], function () {
 
 });
 
-gulp.task('clean', function () {
+gulp.task('clean', function (cb) {
 
-  rimraf('./build', function () {});
+  // return gulp.src(['./build'], {read: false}).pipe(rimraf());
+
+  rimraf('./build', cb);
 });
 
-gulp.task('modules', function () {
+gulp.task('modules', ['clean'], function () {
 
   return gulp.src(['./src/main/modules/**/*'], {
     base: './src/main/modules'
   }).pipe(gulp.dest('./build/modules'));
 });
 
-gulp.task('templates', function () {
+gulp.task('templates', ['clean'],  function () {
 
   return gulp.src(['./src/main/resources/templates/**/*'], {
     base: './src/main/resources/templates'
   }).pipe(gulp.dest('./build/resources/templates'));
 });
 
-gulp.task('images', function () {
+gulp.task('images', ['clean'],  function () {
 
   return gulp.src(['./src/main/resources/static/images/**/*'], {
     base: './src/main/resources/static/images'
   }).pipe(gulp.dest('./build/resources/static/images'));
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', ['clean'],  function() {
 
   return gulp.src(['./src/main/resources/static/scripts/application.js'])
       .pipe(browserify({
@@ -59,7 +61,7 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest('./build/resources/static/scripts'));
 });
 
-gulp.task('styles', function () {
+gulp.task('styles', ['clean'],  function () {
 
   autoprefix = new LessPluginAutoprefix({
     browsers: ["last 2 versions"]
